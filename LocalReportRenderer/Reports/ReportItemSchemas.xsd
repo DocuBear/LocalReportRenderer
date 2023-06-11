@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" id="ReportItemSchemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="OrderDto" nillable="true" type="OrderDto" />
+  <xs:complexType name="OrderDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderLineDto" nillable="true" type="OrderLineDto" />
+  <xs:complexType name="OrderLineDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Price" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
